@@ -6,6 +6,7 @@ import ProfileImg from "assets/profile1.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import HandBg from "assets/hand_bg.png";
 
 import {
     FaMoon,
@@ -57,7 +58,7 @@ const Home = () => {
                     <div className="overlay"></div>
                     <div className="home-text container zoom-out-animation">
                         <div className="hand-bg">
-                            <img src="https://kamleshyadav.com/html/astrology/version-3/assets/images/hand_bg.png" alt="" />
+                            <img src={HandBg} alt="" />
                         </div>
                         <h1>
                             <span>

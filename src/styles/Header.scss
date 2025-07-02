@@ -86,7 +86,6 @@ header {
     padding: 0.8rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
-    @media screen and (max-width: 768px) {}
 
     .nav-links {
       list-style: none;
@@ -160,9 +159,12 @@ header {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
       }
     }
-
+    .mobile-menu {
+      display: none;
+    }
     @media screen and (max-width: 768px) {
       .mobile-menu {
+        display: block;
         position: fixed;
         right: 1rem;
         top: 2rem;
