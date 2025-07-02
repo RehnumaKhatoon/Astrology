@@ -1,0 +1,260 @@
+.home {
+    .zoom-out-animation {
+        animation: zoomInOut 500ms ease-in-out;
+    }
+
+    ;
+
+    .top-section {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        // background-color: var(--theme-backgound-color); 
+        &::after {
+            background: url(https://kamleshyadav.com/html/astrology/version-3/assets/images/shape.svg) no-repeat;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 273px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale(-1);
+            z-index: 1;
+        }
+    }
+
+    .img-wrapper {
+        position: relative;
+
+        img {
+            object-fit: cover;
+            height: 15rem;
+            width: 100%;
+        }
+
+        img:first-child {
+            width: 98%;
+            z-index: 1;
+        }
+
+        img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: blur(10px);
+            // blur
+        }
+    }
+
+    .home-img {
+        width: 100%;
+        height: 100vh;
+        background: url("../assets/home.jpg") no-repeat center center;
+        background-size: cover;
+        // img {
+        //     height: 48rem;
+        //     width: 100%;
+        //     object-fit: cover;
+        //     display: block;
+        // }
+    }
+
+    .hand-bg {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: -5rem;
+            left: 20rem;
+            height: 30rem;
+            width: 30rem;
+            z-index: 9;
+            animation: rotate 20s linear infinite;
+        }
+
+        @media screen and (max-width: 768px) {
+            img {
+                top: -2rem;
+                left: 0rem;
+            }
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .home-text {
+        position: absolute;
+        height: 20rem;
+        top: calc(50% - 10rem);
+        left: 8%;
+        // transform: translateY(-50%);
+        color: white;
+        z-index: 2;
+        max-width: 600px;
+
+
+
+
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+
+            span {
+                display: block;
+                // animation: reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+            }
+
+
+            // &:hover {
+            //     font-weight: 1000;
+            //     transition: 2ms ease-in-out;
+            //     cursor: pointer;
+            // }
+        }
+
+        // @keyframes reveal {
+        //     0% {
+        //         transform: translate(0, 100%);
+        //     }
+
+        //     100% {
+        //         transform: translate(0, 0);
+        //     }
+        // }
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1.2);
+            }
+
+            // 50% {
+            //     transform: scale(1.2);
+            //     /* Zoom in */
+            // }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+
+            // &:hover {
+            //     font-weight: 600;
+            //     transition: 2ms ease-in-out;
+            //     cursor: pointer;
+            // }
+        }
+    }
+
+}
+
+
+.slider {
+    overflow: hidden;
+
+    .astro-card {
+        .card {
+            transition: all 0.3s ease-in-out;
+            background: #fff;
+            border-radius: 16px;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .btn {
+                background: var(--theme-background-color);
+                border-radius: 25px;
+                padding: 0.5rem 1.5rem;
+
+                &:hover {
+                    background-color: var(--theme-primary);
+                    color: #fff;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+                }
+            }
+
+            h5.text-orange {
+                color: var(--theme-primary);
+                font-weight: 700;
+            }
+
+            .fs-5 svg {
+                cursor: pointer;
+                color: #444;
+                transition: 0.2s;
+
+                &:hover {
+                    color: var(--theme-primary);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .home {
+        .top-section {
+            position: relative;
+
+            .home-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                text-align: center;
+                padding: 1rem;
+
+                h1 {
+                    line-height: 2.2rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+
+                    span {
+                        font-size: 2rem;
+
+                        // display: inline-block;
+                        // word-break: break-word;
+                    }
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .hand-bg img {
+                position: absolute;
+                left: 50%;
+                top: -2rem;
+                transform: translateX(-50%);
+                height: 15rem;
+                width: 15rem;
+                opacity: 0.8;
+                object-fit: contain;
+            }
+        }
+    }
+}
