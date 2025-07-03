@@ -1,7 +1,4 @@
-import Header from "components/Header";
-// import Navbar from "components/Header";
 import "styles/Home.scss";
-import Image from "assets/home.jpg";
 import ProfileImg from "assets/profile1.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
